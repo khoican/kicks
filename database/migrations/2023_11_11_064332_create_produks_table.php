@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('produks', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('category_id')->constrained()->cascadeOnUpdate();
-            $table->foreignId('brand_id')->constrained()->cascadeOnUpdate();
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('brand_id')->constrained()->cascadeOnDelete();
             $table->string('nama_produk', 50);
             $table->longtext('deskripsi');
             $table->string('gambar_1', 50);
