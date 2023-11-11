@@ -25,4 +25,8 @@ class Order extends Model
     public function order_detail() {
         return $this->belongsTo(OrderDetail::class);
     }
+
+    public function user() {
+        return $this->hasOne(User::class);
+    }
 }
