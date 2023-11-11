@@ -9,12 +9,14 @@ class Category extends Model
 {
     use HasFactory;
 
+    protected $table = categories;
+
     protected $fillable = [
-        'kategori', 
+        'kategori',
         'deskirpsi'
     ];
 
-    public function produks() {
-        return $this->hasMany(Produk::class);
+    public function produk () {
+        return $this->belongsTo(Produk::class);
     }
 }

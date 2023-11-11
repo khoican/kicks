@@ -9,11 +9,12 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('produks', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('produk_id');
+            $table->foreignId('category_id')->constrained()->cascadeOnUpdate();
+            $table->foreignId('brand_id')->constrained()->cascadeOnUpdate();
             $table->string('nama_produk', 50);
             $table->longtext('deskripsi');
             $table->string('gambar_1', 50);
@@ -24,8 +25,6 @@ return new class extends Migration
             $table->float('harga_normal');
             $table->float('harga_jual');
             $table->timestamps();
-
-            $table->foreign('produk_id')->references('id')->on('produks')->onDelete('cascade');
         });
     }
 

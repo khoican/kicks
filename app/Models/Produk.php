@@ -9,7 +9,11 @@ class Produk extends Model
 {
     use HasFactory;
 
+    protected $table = 'produks';
+
     protected $fillable = [
+        'category_id',
+        'brand_id',
         'nama_produk',
         'deskripsi',
         'gambar_1',
@@ -22,6 +26,10 @@ class Produk extends Model
     ];
 
     public function category() {
-        return $this->belongsTo(Category::class);
+        return $this->hasOne(Category::class);
+    }
+
+    public function brands() {
+        return $this->hasOne(Brand::class);
     }
 }
