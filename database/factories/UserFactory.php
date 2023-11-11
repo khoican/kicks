@@ -22,12 +22,12 @@ class UserFactory extends Factory
     {
         $gender = ['l', 'p'];
         return [
-            'firstname' => fake()->firstName(),
-            'lastname' => fake()->lastName(),
+            'firstname' => 'admin',
+            'lastname' => 'admin',
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'gender' => $this->faker->randomElement($gender),
-            'password' => static::$password ??= Hash::make('password'),
+            'password' => Hash::make('admin'),
         ];
     }
 
