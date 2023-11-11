@@ -20,4 +20,8 @@ class Produk extends Model
         'harga_normal',
         'harga_jual'
     ];
+
+    public function category() {
+        return $this->belongsTo(Category::class);
+    }
 }

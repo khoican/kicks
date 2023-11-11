@@ -13,4 +13,8 @@ class Category extends Model
         'kategori', 
         'deskirpsi'
     ];
+
+    public function produks() {
+        return $this->hasMany(Produk::class);
+    }
 }
