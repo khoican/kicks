@@ -12,5 +12,5 @@ class Brand extends Model
     protected $fillable = [
         'nama_brand',
         'logo'
-    ]
+    ];
 }
