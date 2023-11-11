@@ -21,4 +21,8 @@ class Order extends Model
         'harga_normal',
         'harga_jual',
     ];
+
+    public function order_detail() {
+        return $this->belongsTo(OrderDetail::class);
+    }
 }

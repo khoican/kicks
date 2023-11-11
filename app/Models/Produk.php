@@ -30,4 +30,8 @@ class Produk extends Model
     public function brands() {
         return $this->hasOne(Brand::class);
     }
+
+    public function order_detail() {
+        return $this->belongsTo(OrderDetail::class);
+    }
 }

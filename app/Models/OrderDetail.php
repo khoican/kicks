@@ -13,4 +13,12 @@ class OrderDetail extends Model
         'jumlah',
         'status'
     ];
+
+    public function order() {
+        return $this->hasOne(Order::class);
+    }
+
+    public function produk() {
+        return $this->hasOne(Produk::class);
+    }
 }
