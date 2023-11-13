@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Brand;
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Support\Facades\DB;
 
 class BrandSeeder extends Seeder
 {
@@ -13,6 +12,19 @@ class BrandSeeder extends Seeder
      */
     public function run(): void
     {
-        Brand::factory()->count(3)->create();
+        DB::table("brands")->insert([
+            [
+                'nama_brand' => 'Nike',
+                'logo' => 'nike-logo.png',
+            ],
+            [
+                'nama_brand' => 'Adidas',
+                'logo' => 'adidas-logo.png',
+            ],
+            [
+                'nama_brand' => 'Converse',
+                'logo' => 'converse-logo.png',
+            ]
+        ]);
     }
 }
