@@ -11,7 +11,8 @@ class Brand extends Model
 
     protected $fillable = [
         'nama_brand',
-        'logo'
+        'logo',
+        'created_at'
     ];
 
     public function produk () {
