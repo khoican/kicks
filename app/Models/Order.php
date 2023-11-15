@@ -20,6 +20,7 @@ class Order extends Model
         'ongkir',
         'harga_produk',
         'total',
+        'created_at'
     ];
 
     public function order_detail() {
