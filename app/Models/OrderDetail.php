@@ -13,7 +13,7 @@ class OrderDetail extends Model
         'user_id',
         'produk_id',
         'jumlah',
-        'status',
+        'keuntungan',
         'created_at'
     ];
 

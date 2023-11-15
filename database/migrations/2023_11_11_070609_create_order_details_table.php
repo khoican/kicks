@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('order_id')->constrained()->cascadeOnDelete();
             $table->foreignId('produk_id')->constrained()->cascadeOnDelete();
             $table->integer('jumlah');
-            $table->string('status',20);
+            $table->float('keuntungan', 12, 2);
             $table->timestamps();
         });
     }

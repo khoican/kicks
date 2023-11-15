@@ -19,14 +19,14 @@ class OrderDetailSeeder extends Seeder
                 'order_id' => 1,
                 'produk_id' => 1,
                 'jumlah' => 1,
-                'status' => 'dalam perjalanan',
+                'keuntungan' => 349000,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
             [
                 'order_id' => 1,
                 'produk_id' => 2,
                 'jumlah' => 1,
-                'status' => 'dalam perjalanan',
+                'keuntungan' => 132000,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ],
         ]);
