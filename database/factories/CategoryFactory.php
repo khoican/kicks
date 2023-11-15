@@ -20,7 +20,7 @@ class CategoryFactory extends Factory
         $category = ['Sport', 'Casual', 'Formal'];
         return [
             'kategori' => $this->faker->unique()->randomElement($category),
-            'deskripsi' => Str::random(10)
+            'deskripsi' => Str::random(250)
         ];
     }
 }
