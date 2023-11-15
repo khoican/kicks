@@ -21,9 +21,9 @@ return new class extends Migration
             $table->string('gambar_2', 50);
             $table->string('gambar_3', 50);
             $table->string('gambar_4', 50);
-            $table->float('harga_beli');
-            $table->float('harga_normal');
-            $table->float('harga_jual');
+            $table->float('harga_beli', 12, 2);
+            $table->float('harga_normal', 12, 2);
+            $table->float('harga_jual', 12, 2);
             $table->timestamps();
         });
     }
