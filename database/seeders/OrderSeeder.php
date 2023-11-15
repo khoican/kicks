@@ -22,6 +22,7 @@ class OrderSeeder extends Seeder
                 'alamat' => 'Jl. Merbabu No. 31 Jember',
                 'no_telp' => 8819467281,
                 'pengiriman' => 'standard',
+                'status' => 'delivered',
                 'ongkir' => '21000',
                 'harga_produk' => '2048000',
                 'total' => '2069000',

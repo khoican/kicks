@@ -17,6 +17,7 @@ class Order extends Model
         'alamat',
         'no_telp',
         'pengiriman',
+        'status',
         'ongkir',
         'harga_produk',
         'total',

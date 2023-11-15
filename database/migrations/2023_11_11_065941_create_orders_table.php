@@ -20,6 +20,7 @@ return new class extends Migration
             $table->longtext('alamat');
             $table->bigInteger('no_telp');
             $table->string('pengiriman',50);
+            $table->string('status',50);
             $table->float('ongkir', 12, 2);
             $table->float('harga_produk', 12, 2);
             $table->float('total', 12, 2);
