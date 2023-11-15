@@ -21,9 +21,8 @@ return new class extends Migration
             $table->bigInteger('no_telp');
             $table->string('pengiriman',50);
             $table->float('ongkir', 12, 2);
-            $table->float('harga_beli', 12, 2);
-            $table->float('harga_normal', 12, 2);
-            $table->float('harga_jual', 12, 2);
+            $table->float('harga_produk', 12, 2);
+            $table->float('total', 12, 2);
             $table->timestamps();
         });
     }
