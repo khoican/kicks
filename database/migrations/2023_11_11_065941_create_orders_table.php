@@ -20,10 +20,10 @@ return new class extends Migration
             $table->longtext('alamat');
             $table->bigInteger('no_telp');
             $table->string('pengiriman',50);
-            $table->float('ongkir');
-            $table->float('harga_beli');
-            $table->float('harga_normal');
-            $table->float('harga_jual');
+            $table->float('ongkir', 12, 2);
+            $table->float('harga_beli', 12, 2);
+            $table->float('harga_normal', 12, 2);
+            $table->float('harga_jual', 12, 2);
             $table->timestamps();
         });
     }
