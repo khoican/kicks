@@ -24,9 +24,9 @@ class ProdukSeeder extends Seeder
                 'gambar_2' => 'nike-air-force-2.jpg',
                 'gambar_3' => 'nike-air-force-3.jpg',
                 'gambar_4' => 'nike-air-force-4.jpg',
-                'harga_beli' => '100000',
-                'harga_normal' => '154900',
-                'harga_jual' => '134900',
+                'harga_beli' => '1000000',
+                'harga_normal' => '1549000',
+                'harga_jual' => '1349000',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             ]
         ]);
