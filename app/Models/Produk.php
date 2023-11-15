@@ -20,7 +20,8 @@ class Produk extends Model
         'gambar_4',
         'harga_beli',
         'harga_normal',
-        'harga_jual'
+        'harga_jual',
+        'created_at'
     ];
 
     public function category() {
