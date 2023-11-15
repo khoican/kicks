@@ -17,9 +17,8 @@ class Order extends Model
         'no_telp',
         'pengiriman',
         'ongkir',
-        'harga_beli',
-        'harga_normal',
-        'harga_jual',
+        'harga_produk',
+        'total',
     ];
 
     public function order_detail() {
