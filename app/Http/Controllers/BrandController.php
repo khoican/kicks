@@ -56,7 +56,7 @@ class BrandController extends Controller
             $image = $request->file('logo');
             $image->storeAs('public/logo', $image->hashName());
 
-            Storage::delete('public/logo'.$brand->logo);
+            Storage::delete('public/logo/'.$brand->logo);
 
             $brand->update([
                 'nama_brand' => $request->nama_brand,
