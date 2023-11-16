@@ -19,6 +19,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/register', App\Http\Controllers\RegisterController::class)->name('register');
+Route::post('/login', App\Http\Controllers\LoginController::class)->name('login');
+
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
 
 Route::apiResource('/brands', App\Http\Controllers\BrandController::class);
 Route::apiResource('/categories', App\Http\Controllers\CategoryController::class);
