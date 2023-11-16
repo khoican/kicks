@@ -22,3 +22,4 @@ Route::apiResource('/brands', App\Http\Controllers\BrandController::class);
 Route::apiResource('/categories', App\Http\Controllers\CategoryController::class);
 Route::apiResource('/produks', App\Http\Controllers\ProdukController::class);
 Route::apiResource('/orders', App\Http\Controllers\OrderController::class);
+Route::apiResource('/order-details', App\Http\Controllers\OrderDetailController::class);
