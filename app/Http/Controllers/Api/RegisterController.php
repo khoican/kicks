@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Validator;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Api\Controller;
 
 class RegisterController extends Controller
 {

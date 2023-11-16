@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Models\OrderDetail;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Api\Controller;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Resources\OrderDetailResource;
 

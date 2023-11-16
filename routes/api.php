@@ -18,16 +18,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/register', App\Http\Controllers\RegisterController::class)->name('register');
-Route::post('/login', App\Http\Controllers\LoginController::class)->name('login');
-Route::post('/logout', App\Http\Controllers\LogoutController::class)->name('logout');
+Route::post('/register', App\Http\Controllers\Api\RegisterController::class)->name('register');
+Route::post('/login', App\Http\Controllers\Api\LoginController::class)->name('login');
+Route::post('/logout', App\Http\Controllers\Api\LogoutController::class)->name('logout');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('/brands', App\Http\Controllers\BrandController::class);
-Route::apiResource('/categories', App\Http\Controllers\CategoryController::class);
-Route::apiResource('/produks', App\Http\Controllers\ProdukController::class);
-Route::apiResource('/orders', App\Http\Controllers\OrderController::class);
-Route::apiResource('/order-details', App\Http\Controllers\OrderDetailController::class);
+Route::apiResource('/brands', App\Http\Controllers\Api\BrandController::class);
+Route::apiResource('/categories', App\Http\Controllers\Api\CategoryController::class);
+Route::apiResource('/produks', App\Http\Controllers\Api\ProdukController::class);
+Route::apiResource('/orders', App\Http\Controllers\Api\OrderController::class);
+Route::apiResource('/order-details', App\Http\Controllers\Api\OrderDetailController::class);

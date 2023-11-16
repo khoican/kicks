@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Validator;
 use Carbon\Carbon;
@@ -8,6 +8,7 @@ use App\Models\Produk;
 use Illuminate\Http\Request;
 use App\Http\Resources\ProdukResource;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\Api\Controller;
 
 class ProdukController extends Controller
 {

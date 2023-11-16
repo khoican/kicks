@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
 use App\Http\Resources\OrderResource;
+use App\Http\Controllers\Api\Controller;
 use Illuminate\Support\Facades\Validator;
 
 class OrderController extends Controller

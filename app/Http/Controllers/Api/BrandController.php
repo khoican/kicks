@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Carbon\Carbon;
 use App\Models\Brand;
 use Illuminate\Http\Request;
 use App\Http\Resources\BrandResource;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\Api\Controller;
 use Illuminate\Support\Facades\Validator;
 
 class BrandController extends Controller
