@@ -12,7 +12,7 @@ class Category extends Model
 
     protected $fillable = [
         'kategori',
-        'deskirpsi'
+        'deskripsi'
     ];
 
     public function produk () {
