@@ -75,7 +75,7 @@ class BrandController extends Controller
     }
 
     public function destroy(Brand $brand) {
-        Storage::delete('public/logo'.$brand->logo);
+        Storage::delete('public/logo/'.$brand->logo);
         $brand->delete();
 
         return new BrandResource(true, 'Success Deleting Data', $brand);
