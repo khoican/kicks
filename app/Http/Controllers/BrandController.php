@@ -52,7 +52,7 @@ class BrandController extends Controller
             return response()->json($validator->errors(), 422);
         }
 
-        if($request->hasFile('image')){
+        if($request->hasFile('logo')){
             $image = $request->file('logo');
             $image->storeAs('public/logo', $image->hashName());
 
