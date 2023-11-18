@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ProdukController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +29,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::apiResource('/brands', App\Http\Controllers\Api\BrandController::class);
 Route::apiResource('/categories', App\Http\Controllers\Api\CategoryController::class);
-Route::apiResource('/produks', App\Http\Controllers\Api\ProdukController::class);
+// Route::apiResource('/produks', App\Http\Controllers\Api\ProdukController::class);
+
+Route::controller(ProdukController::class)->group(function () {
+    Route::get('produks', [ProdukController::class,'index']);
+    Route::get('produks/best-seller', [ProdukController::class,'bestSeller']);
+});
+
 Route::apiResource('/orders', App\Http\Controllers\Api\OrderController::class);
 Route::apiResource('/order-details', App\Http\Controllers\Api\OrderDetailController::class);

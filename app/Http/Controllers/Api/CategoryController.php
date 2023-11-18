@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Api;
 
-use Validator;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Api\Controller;
 use App\Http\Resources\CategoryResource;
+use Illuminate\Support\Facades\Validator;
 
 class CategoryController extends Controller
 {

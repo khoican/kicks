@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\Api;
 
-use Validator;
 use Carbon\Carbon;
 use App\Models\Produk;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Resources\ProdukResource;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Api\Controller;
+use Illuminate\Support\Facades\Validator;
 
 class ProdukController extends Controller
 {
@@ -187,5 +188,11 @@ class ProdukController extends Controller
         $produk->delete();
 
         return new ProdukResource(true, 'Delete Data Success', $produk);
+    }
+
+    public function bestSeller() {
+        $produk = DB::table('produks')->select('produks.id', 'produks.nama_produk', DB::raw('sum(order_details.produk_id) as  jumlah_terjual'))->leftJoin('order_details', 'produks.id', '=', 'order_details.produk_id')->groupBy('produks.id','produks.nama_produk')->get();
+
+        return new ProdukResource(true, "Get Data Success", $produk);
     }
 }
