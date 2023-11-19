@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Validator;
 class ProdukController extends Controller
 {
     public function index() {
-        $produk = Produk::all();
+        $produk = Produk::latest()->get();
 
         return new ProdukResource(true, "Get Data Success", $produk);
     }
